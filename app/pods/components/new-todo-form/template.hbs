@@ -1,0 +1,25 @@
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group {{if todos.owner "has-todo"}}">
+            <label for="helyszin" class="col-lg-2 control-label">Kié a feladat</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="helyszin" name="helyszin" placeholder="Tomi, Sanyi, stb..." type="text" value="{{data.owner}}">
+                <span class="help-block">{{todos.owner}}</span>
+            </div>
+        </div>
+        <div class="form-group {{if todos.description "has-todo"}}">
+            <label for="leiras" class="col-lg-2 control-label">Tennivaló leírása</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.description}}</textarea>
+                <span class="help-block">Adja meg, hogy mi a tennivaló. (pl: Moss fel, stb)</span>
+                <span class="help-block">{{todos.description}}</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button {{action "submit"}} class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>        

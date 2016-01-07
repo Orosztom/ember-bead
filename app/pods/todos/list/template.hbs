@@ -1,0 +1,23 @@
+{{#each messages}}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Tennivalók</h1>
+</div>
+
+{{todo-list todos=model}}
+
+<p>
+    <button {{action "showModal" "new-todo-modal" "todos.list"}} class="btn btn-default">Új Todo felvitele</button>
+    {{!--{{link-to "Új hiba felvitele" "todos.new" class="btn btn-default"}}--}}
+</p>
+{{!--<a href="/todos/new" class="btn btn-default">Új hiba felvitele</a>--}}
+
+
+{{!--{{#modal-dialog title="My modal #1"}}--}}
+{{!--  This is the content of my modal #1--}}
+{{!--{{/modal-dialog}}--}}
