@@ -11,23 +11,23 @@ TodoModel.reopenClass({
     FIXTURES: [
         {
             id: 1,
-            date: '2021.12.12',
+            date: '2025.12.12',
             owner: 'Tomi',
-            description: 'rossz',
+            description: 'Moss fel!',
             status: 'new',
         },    
         {
             id: 2,
-            date: '2012.12.12',
-            owner: 'pc2',
-            description: 'rossz',
+            date: '2015.12.12',
+            owner: 'Sanyi',
+            description: 'Takaríts!',
             status: 'assigned',
         },    
         {
             id: 3,
             date: '2015.12.12',
-            owner: 'pc9',
-            description: 'rossz',
+            owner: 'Peti',
+            description: 'Hozz kaját! :)',
             status: 'success',
         },    
     ]

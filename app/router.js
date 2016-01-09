@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('view', {path: '/:todo_id'});
     this.route('edit', {path: '/edit/:todo_id'});
   });
+  this.route('about');
 });
 
 export default Router;

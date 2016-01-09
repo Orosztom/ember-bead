@@ -8,9 +8,9 @@ export default Ember.Controller.extend({
                 Object.assign(
                     {
                         status: 'new',
-                        //date: Date.now().toLocaleString(),
-                        owner: 'labor',
-                        description: 'rossz'
+                        //date: Date.now().toISOString(), nemtomménemjó
+                        owner: 'Tomi',
+                        description: 'Moss fel!',
                     }, 
                     formData
                 )
