@@ -33,19 +33,18 @@ A felhasználó a program használatakor először egy üdvözlő oldalra kerül
 
 **Architecktúra terv:**
 
-Az alkalmazás egy Javascript alapú HTML, waterline, sails, express, és mocha technológiákat használó program. Az alapvető működésért egy szerver szolgál, aminek a kódját a server.js tartalmazza. Ebben tároljuk a különböző végpontokért felelő controllereket, amiket a saját "controllers" almappában elhelyezett .js-fájlokból nyer ki a server.js. Ez szerver felel a titkosítási technológinak a helyes használatáért is (bcrypt).
+Az alkalmazás egy Javascript alapú HTML, ember js, bower, bootstrap technológiákat használó program. A kliensoldali alkalmazás alapját az app mappában lévő router.js (ebben találhatóak az oldal végpontjai) és a végpontokhoz tarozó, a pods mappában tárolt template.hbs, route.js és controller.js file-ok alkotják.
 
 Oldal térkép:
 ![eset diagram](images/esetdiagram.jpg)
 
 Végpontok:
 
-- /login                A bejelentkezés oldala
-- /login/signup         A regisztráció oldala
-- todos/list            A listázó oldal
-- todos/new             Az új TODO felvétele oldal
-- todos/edit/:id        A TODO szerkesztése oldal
-- todos/delete/:id      A TODO törlése oldal
+- todos/list                A listázó oldal
+- todos/new                 Az új TODO felvétele oldal
+- todos/edit/:todo_id       A TODO szerkesztése oldal
+- todos/delete/:todo_id     A TODO törlése oldal
+- todos/view/:todo_id       A TOODO megtekintése  
 
 **Felhasználóifelület-modell**
 
