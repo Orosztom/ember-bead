@@ -23,7 +23,7 @@ Szerep körök:
 A program todo típusú adatokat tárol egy távoli szerveren amik a program megnyitása után elérhetőek a felhaználók számára. Nincsen egyedi user-ek.
 
 Használati eset diagram:
-![eset diagram](images/esetdiagram2.jpg)
+![eset diagram](images/esetdiagram.jpg)
 
 Egy folyamat ismertetése:
 
@@ -36,10 +36,11 @@ A felhasználó a program használatakor először egy üdvözlő oldalra kerül
 Az alkalmazás egy Javascript alapú HTML, ember js, bower, bootstrap technológiákat használó program. A kliensoldali alkalmazás alapját az app mappában lévő router.js (ebben találhatóak az oldal végpontjai) és a végpontokhoz tarozó, a pods mappában tárolt template.hbs, route.js és controller.js file-ok alkotják.
 
 Oldal térkép:
-![eset diagram](images/esetdiagram.jpg)
+![eset diagram](images/oldaltérkép.jpg)
 
 Végpontok:
 
+- about                     Az oldal készítőjének adatai
 - todos/list                A listázó oldal
 - todos/new                 Az új TODO felvétele oldal
 - todos/edit/:todo_id       A TODO szerkesztése oldal
@@ -54,25 +55,25 @@ Első oldal:
 
 ![első oldal](images/1.jpg)
 
-Bejelentkező oldal:
+Lista oldal:
 
 ![login oldal](images/2.jpg)
 
-Regisztráció oldal:
-
-![regisztrációs oldal](images/6.jpg)
-
-Listázó oldal:
-
-![listázó oldal](images/3.jpg)
-
 Szerkesztő oldal:
 
-![szerkesztési oldal](images/4.jpg)
+![regisztrációs oldal](images/3.jpg)
 
-Új TODO felvétele oldal:
+Új Todo felvétele oldal:
 
-![új todo oldal](images/5.jpg)
+![listázó oldal](images/4.jpg)
+
+About oldal:
+
+![szerkesztési oldal](images/5.jpg)
+
+TODO megtekintése oldal:
+
+![új todo oldal](images/6.jpg)
 
 **Adatmodell**
 
@@ -97,73 +98,15 @@ Mappa szerkezet:
 - views: az oldalak megjeneésért felelős hbs file-ok
 - images: a dokumentációban használt képek
 
-##4. Tesztelés
-
-Adatmodell tesztelés:
-
-A program adatszerkezetét CHAI-al volt tesztelve.
-
-Emellett funkcionális teszt történt.
-
 ##5. Felhasználói dokumentáció
 
 Futtatási követelmények:
 - Egy javascript futtatására alkalmas böngésző
 - Operációs rendszeres tetszőleges
+- 2db Cloud9-os workspace
+- 
 
 
 A program használata a folyamat ismertetés alapján magától értetődik.
 
-# Bead
-
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
