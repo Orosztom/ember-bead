@@ -23,7 +23,7 @@ Szerep körök:
 A program todo típusú adatokat tárol egy távoli szerveren amik a program megnyitása után elérhetőek a felhaználók számára. Nincsen egyedi user-ek.
 
 Használati eset diagram:
-![eset diagram](images/esetdiagram.jpg)
+![eset diagram](images/esetdiagramm.jpg)
 
 Egy folyamat ismertetése:
 
