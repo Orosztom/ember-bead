@@ -77,7 +77,7 @@ TODO megtekintése oldal:
 
 **Adatmodell**
 
-![Adatbázis modell diagram-ja](images/adatbazis_modell.png)
+![Adatbázis modell diagram-ja](images/adatbazis_model.jpg)
 
 ##3. Implementálás
 
@@ -88,11 +88,6 @@ A fejlesztés a cloud 9 felületén zajlott.
 Mappa szerkezet:
 
 ![Adatbázis modell diagram-ja](images/mappak.jpg)
-
-- .tmp: itt tároljuk file-ban az adatokat
-- config: a waterline configurációját tároljuk itt
-- controllers: a végpontok controllerei
-
 
 ##5. Felhasználói dokumentáció
 
