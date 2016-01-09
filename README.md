@@ -4,28 +4,30 @@
 
 **Funkcionális elvárások:**
 
-A webes alkalmazás amit készítünk egy egyszerű családok számára használható TODO (tennivalók kigyűjtése) program.
+A webes alkalmazás amit készítünk egy egyszerű családok számára használható TODO (tennivalók kigyűjtése) program. A programnak kell lennie egy lista oldalnak, ahol az összes tennivaló látható. Erről az oldalról lehetőségünk van az egyes tennivalókat megtekinteni, szerkeszteni és törölni, illetve új tennivalókat felvenni. Az új tennivalókat egy felugró ablakban tudjuk felvenni, egy tennivalót szerkeszteni pedig egy külön oldalon. A lista oldalon minden tennivalóhoz tartozik továbbá egy "megtekint" gomb, ami egy kölön oldalon kiírja az adott tennivaló adatait.
 
 **Nem funkcionális követelmények:**
 
-A perzisztálásnak file-ba kell történnie és a program közzétételére a HERUKO platformot kell használni.
+Az alkalmazást vastagkliens alkalmazásként valósítjuk meg ember js segítségével. Az adatbázisunk egy Rest api-t használó távoli adatbázis szerver.
 
 **Szakterületi fogalomjegyzék:**
 
 - todo: Az adatbázisban tárolt tennivalók elnevezése.
+- ember js: vastagkliens alkalmazás technológia, a program alapja
+- REST API: Representational State Transfer) egy szoftverarchitektúra típus elosztott hipermédia rendszerek számára
 
 **Használati eset modell:**
 
 Szerep körök:
 
-A program user típusú adatokat tárol, nekik van jogosultságok megtekinteni és szerkeszteni, valamint törölni todo-kat. Amikor elkezdjük használni a programot, akkor a usernek lehetősége van meglévő adatokkal belélpni, vagy regisztrálni. Mind a kettő után a felhasználó eléri az összes todo-t. Ezek után lehetősége van szerkeszteni ezeket, törölni őket, vagy újakat létrehozni, vagy kilépni.  
+A program todo típusú adatokat tárol egy távoli szerveren amik a program megnyitása után elérhetőek a felhaználók számára. Nincsen egyedi user-ek.
 
 Használati eset diagram:
 ![eset diagram](images/esetdiagram2.jpg)
 
 Egy folyamat ismertetése:
 
-A felhasználó a program használatakor először egy üdvözlő oldalra kerül, innen a bejelentkezés gombra kattintva átkerül a bejelentkező oldalra. Ha nem regisztrált a felhasználó, akkor a bejelentkező oldalról egy "regisztráció" gomb egy regisztráció oldalra irányítja. Itt az adatok megadása után a "Submit" gombra kattintva megtörténik a regisztráció és visszadobja a felhasználót a program a bejelentkező oldalra. (Értelem szerűen ha már regisztrált a felhasználó, akkor a bejelentkező oldalról egyből beléphet.) Ha sikeresen beléptünk, elérjük az összes TODO-t egy oldalon listázva. Minden TODO-hoz tartozik egy szerkesztés és egy törlés gomb. A szerkesztés gombra kattintva értelem szerűen az adott TODO leírása szerkeszthető és az, hogy kinek a feladata az adott TODO. Ha elmentettük a módosításokat akkor visszakerülünk a lista oldalra, ahol már a módosított adatokkal jelenik meg a TODO. Értelem szerűen a törlés gomb törli az adott TODO-t. Megtalálható továbbá még a lista oldalon egy "Új TODO felvétele" gomb, ami a szerkesztő oldalhoz hasonló oldalra irányít, ahol egy teljesen új TODO vehető fel. Ha elmentettük, akkor visszakerülünk a lista oldalra. Minden oldalról kijelentkezhetünk a jobb felső sarokban látható "kijelentkezés" gombbal.
+A felhasználó a program használatakor először egy üdvözlő oldalra kerül, innen elérjük az összes TODO-t egy oldalon listázva. Minden TODO-hoz tartozik egy szerkesztés, egy törlés gomb és egy megtekintés gomb. A szerkesztés gombra kattintva értelem szerűen az adott TODO leírása szerkeszthető és az, hogy kinek a feladata az adott TODO. Ha elmentettük a módosításokat akkor visszakerülünk a lista oldalra, ahol már a módosított adatokkal jelenik meg a TODO. Értelem szerűen a törlés gomb törli az adott TODO-t. A megtekintés gomb az adott Todo részleteit mutatja meg (id, Kié a tennivaló, Tennivaló leírása. Megtalálható továbbá még a lista oldalon egy "Új TODO felvétele" gomb, ami egy felugró ablakot nyit ki, ahol egy teljesen új TODO vehető fel. Ha elmentettük, akkor visszakerülünk a lista oldalra. 
 
 ##2. Tervezés
 
