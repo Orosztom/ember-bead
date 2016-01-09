@@ -92,21 +92,17 @@ Mappa szerkezet:
 - .tmp: itt tároljuk file-ban az adatokat
 - config: a waterline configurációját tároljuk itt
 - controllers: a végpontok controllerei
-- models: az adatbázik modelljét leíró file-ok és a teszt file-ok
-- node_modules: a különböző node modulok
-- public: bootswatch, bootstrap, jquery
-- views: az oldalak megjeneésért felelős hbs file-ok
-- images: a dokumentációban használt képek
+
 
 ##5. Felhasználói dokumentáció
 
 Futtatási követelmények:
 - Egy javascript futtatására alkalmas böngésző
 - Operációs rendszeres tetszőleges
-- 2db Cloud9-os workspace
-- 
+- 2db Cloud9-os workspace (az egyiken a rest-server.tar kicsomagolása után a "node server.js" parancsal a szervert el kell indítani, a másikon a vastagkliens alkalmazást kell futtatni a bead mappában állva a "./node_modules/.bin/ember serve" paranccsal)
+- Fontos, hogy az app/pods/application/adapter.js file-ban a hostnak meg kell egyeznie a rest server címével ('http://rest-server-orosztom.c9users.io')
 
-
+Ezután a program a böngészőből használhataó a http://ember-bead1-orosztom.c9users.io:8080/ címen.
 A program használata a folyamat ismertetés alapján magától értetődik.
 
 
